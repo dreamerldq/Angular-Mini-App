@@ -1,0 +1,17 @@
+<div *ngIf = "studio">
+    <h1>{{studio.studioName}}</h1>
+    <input [(ngModel)]="studio.studioName">
+    <h3>
+      {{studio.address}}
+    </h3>
+    <h3>
+        {{studio.course }}
+      </h3>
+      <h3>
+          {{studio.introduction}}
+        </h3>
+        <h3>
+            {{studio.research}}
+          </h3>
+      <button (click)="updateDetail()">更新</button>
+</div>
