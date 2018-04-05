@@ -13,8 +13,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudioComponent } from './studio/studio.component';
 import { StudioService } from './studio.service';
 import { StudioDetailComponent } from './studio-detail/studio-detail.component';
-
-
+import { TodolistComponent } from './todolist/todolist.component';
+import { TodofilterComponent } from './todofilter/todofilter.component';
+import { TodofilterService } from './todofilter.service'
+import { NewmoduleModule } from './newmodule.module'
  
 @NgModule({
   declarations: [
@@ -25,17 +27,22 @@ import { StudioDetailComponent } from './studio-detail/studio-detail.component';
     DashboardComponent,
     StudioComponent,
     StudioDetailComponent,
+    TodolistComponent,
+    TodofilterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NewmoduleModule
+
   ],
   providers: [
     HeroService,
     MessageService,
-    StudioService
+    StudioService,
+    TodofilterService
 ],
   bootstrap: [ AppComponent ]
 })

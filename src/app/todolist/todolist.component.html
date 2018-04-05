@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<div>
+  <input  #todo/>
+  <button  (click)="addTodo(todo.value)">添加Todo</button>
+</div>
+<ul>
+  <li *ngFor = "let item of todoList">
+    {{item.content}}
+    <button (click) ="removeTodo(item.id)">删除</button>
+    <button (click) ="toggleTodo(item.id)">开关</button>
+  </li>
+</ul>
+<app-todofilter [todoList] ="todoList"></app-todofilter>

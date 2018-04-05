@@ -1,0 +1,6 @@
+<button #state *ngFor = "let item of state" (click)="changeState(state)">{{item}}</button>
+<div *ngIf="todoList">
+  <div *ngFor="let todo of todoList">
+    <h2>{{todo.content}}</h2>
+  </div>
+</div>
